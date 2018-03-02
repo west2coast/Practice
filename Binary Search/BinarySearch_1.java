@@ -16,10 +16,9 @@ public class BinarySearch_1 {
     public static int doSearch(int[] array, int targetValue){
         int min = 0;
         int max = array.length - 1;
-        int guess;
 
-        while (max > min){
-          guess = (min + max) / 2;
+        while (max >= min){
+          int guess = (min + max) / 2;
           if (targetValue == array[guess]){
             return guess;
           }else if (array[guess] < target){
@@ -27,10 +26,7 @@ public class BinarySearch_1 {
           }else{
             max = guess - 1;
           }
-
-
         }
-
 
         return -1;
     }
